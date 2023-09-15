@@ -6,14 +6,14 @@
     <title><%=htmlWebpackPlugin.options.title%></title>
   </head>
   <body>
-    <div class="enter_city">
-      <input type="text" id="city_name">
-      <button>Search</button>
-    </div>
+    <div class="loader"><img alt="" class="loading"></div>
+    
+    <div class="drop_shadow"></div>
+    
     <div class="country_info_display">
       <div class="left">
         <h1 class="country">Country:none</h1>
-        <h1 class="name">Name:none</h1>
+        <!-- <h1 class="name">Name:none</h1> -->
         <h1 class="region">Region:none</h1>
         <h1 class="time">localtime:none</h1>
       </div>
@@ -22,6 +22,10 @@
         <h1 id="celsius">Temperature &deg;c</h1>
         <h1 class="humid">Humidity</h1>
       </div>
+    </div>
+    <div class="enter_city">
+      <input type="text" id="city_name" placeholder="Enter City">
+      <button>Search</button>
     </div>
   </body>
 </html>

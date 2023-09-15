@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack serve",
-    "clear-cache": "rm -rf node_modules/.cache/*"
+    "clear-cache": "rm -rf node_modules/.cache/*",
+    "live":"git subtree push --prefix=dist upload gh-pages"
   },
   "keywords": [],
   "author": "",

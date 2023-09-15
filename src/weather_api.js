@@ -12,26 +12,4 @@ async function get_weather(location) {
   return response_json;
 }
 
-let get_data = (location) => {
-  let country;
-  let name;
-  let region;
-  let localtime;
-  let temp_c;
-  let temp_f;
-  let humidity;
-
-  get_weather(location).then((response) => {
-    country = response.location.country;
-    name = response.location.name;
-    region = response.location.region;
-    localtime = response.location.localtime;
-    temp_c = response.current.temp_c;
-    temp_f = response.current.temp_f;
-    humidity = response.current.humidity;
-  });
-
-  return { country, name, region, localtime, temp_c, temp_f, humidity };
-};
-
-export default get_data;
+export default get_weather;

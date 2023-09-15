@@ -1,3 +1,12 @@
+:root{
+    --dark-bluish:#415A77;
+    --light-blutish :#778DA9;
+}
+
+*{
+    margin: 0;
+}
+
 body{
     display: flex;
     width: 100%;
@@ -5,6 +14,36 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: url(assets/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.loader{
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader .loading{
+    width: 100px;
+    height: 100px;
+    z-index: 10;
+    position: absolute;
+}
+
+div.drop_shadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    z-index: -1;
 }
 
 div.enter_city{
@@ -12,4 +51,49 @@ div.enter_city{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem;
+}
+
+div.enter_city button{
+    margin-top: 1rem;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    background: var(--dark-bluish);
+    transition: all ease-in-out 300ms;
+    font-size: 2rem;
+    color: white;
+    border-radius: 20px;
+    border-radius: 20px 0px 20px 0px;
+}
+
+div.enter_city button:hover{
+    background-color: var(--light-blutish);
+    border-radius:  0px  20px  0px 20px;
+}
+
+div.enter_city input{
+    padding: 1rem;
+    font-size: 2rem;
+    border: 3px solid var(--dark-bluish);
+    border-radius: 20px 0px 20px 0px ;
+    transition: border-color ease-in-out 300ms,border-radius ease-in-out 300ms;
+}
+
+
+div.enter_city input:hover{
+    border-color: var(--light-blutish);
+    border-radius: 0px 20px 0px 20px;
+}
+
+div.country_info_display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    border: 4px solid var(--light-blutish);
+    padding: 1rem;
+    transition: border-radius ease-in-out 300ms;
+    border-radius:20px;
+    margin-top: 2rem;
+    background-color: white;
 }

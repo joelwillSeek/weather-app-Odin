@@ -2,7 +2,7 @@ const path = require("path");
 const html_webpack_plugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: {
     bundler: path.resolve(__dirname, "src/index.js"),
   },
@@ -12,12 +12,12 @@ module.exports = {
     assetModuleFilename: "[name][ext]",
     filename: "[name][contenthash].js",
   },
-  devtool: "source-map",
+  // devtool: "source-map",
   devServer: {
     static: {
       directory: path.resolve(__dirname, "dist"),
     },
-    port: 3003,
+    port: 3011,
     hot: true,
     open: true,
     compress: true,
@@ -34,9 +34,16 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(gif|jpg)$/i,
+        type: "asset/resource",
+      },
+      {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
     ],
+  },
+  performance: {
+    hints: false,
   },
 };

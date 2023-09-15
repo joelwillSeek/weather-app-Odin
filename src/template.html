@@ -5,5 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%=htmlWebpackPlugin.options.title%></title>
   </head>
-  <body></body>
+  <body>
+    <div class="enter_city">
+      <input type="text" id="city_name">
+      <button>Search</button>
+    </div>
+    <div class="country_info_display">
+      <div class="left">
+        <h1 class="country">Country:none</h1>
+        <h1 class="name">Name:none</h1>
+        <h1 class="region">Region:none</h1>
+        <h1 class="time">localtime:none</h1>
+      </div>
+      <div class="right">
+        <h1 id="fahrenheit">Temperature &deg;f</h1>
+        <h1 id="celsius">Temperature &deg;c</h1>
+        <h1 class="humid">Humidity</h1>
+      </div>
+    </div>
+  </body>
 </html>

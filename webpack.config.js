@@ -17,7 +17,7 @@ module.exports = {
     static: {
       directory: path.resolve(__dirname, "dist"),
     },
-    port: 3000,
+    port: 3003,
     hot: true,
     open: true,
     compress: true,
@@ -31,4 +31,12 @@ module.exports = {
       filename: "index.html",
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
 };
